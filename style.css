@@ -41,6 +41,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     transition: background-color 0.3s, color 0.3s;
+    padding-top: 80px; /* Add padding for the fixed header */
 }
 
 body::before {
@@ -55,15 +56,52 @@ body::before {
     pointer-events: none;
 }
 
-.app-container {
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--container-bg-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.site-nav a:hover {
+    color: var(--button-bg-color);
+}
+
+.app-container, .content-section, .form-section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     background-color: var(--container-bg-color);
     padding: 2.5rem 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-    text-align: center;
     width: 90%;
     max-width: 500px;
     backdrop-filter: blur(10px);
+}
+
+.app-container {
+    text-align: center;
     position: relative;
 }
 
@@ -168,20 +206,6 @@ body::before {
     box-shadow: 0 6px 20px var(--button-hover-shadow-color);
 }
 
-/* Formspree Form Styles */
-.form-section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background-color: var(--container-bg-color);
-    padding: 2.5rem 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
-    backdrop-filter: blur(10px);
-}
-
 .form-title {
     font-size: 1.8rem;
     font-weight: 700;
@@ -244,6 +268,33 @@ body::before {
     min-width: 150px;
 }
 
+#disqus_thread {
+    margin-top: 2rem;
+    background-color: var(--container-bg-color);
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-color-secondary);
+    width: 100%;
+}
+
+.site-footer a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--text-color-primary);
+}
+
 
 @keyframes pop-in {
     from {
@@ -256,26 +307,9 @@ body::before {
     }
 }
 
-/* Disqus Styles */
-#disqus_thread {
-    margin-top: 2rem;
-    background-color: var(--container-bg-color);
-    padding: 2.5rem 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-    width: 90%;
-    max-width: 500px;
-    backdrop-filter: blur(10px);
-}
-
-
 /* Responsive Styles */
 @media (max-width: 480px) {
-    .app-container {
-        padding: 2rem 1.5rem;
-    }
-
-    .form-section {
+    .app-container, .content-section, .form-section, #disqus_thread {
         padding: 2rem 1.5rem;
     }
 

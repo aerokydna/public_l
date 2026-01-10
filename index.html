@@ -26,27 +26,27 @@
         </div>
 
         <button class="generate-btn" id="generate-btn">번호 생성하기</button>
-
-        <div class="form-section">
-            <h2 class="form-title">추첨 후기 보내기</h2>
-            <p class="form-description">행운의 순간을 다른 사람들과 공유해주세요!</p>
-            <form action="https://formspree.io/f/xojjanzz" method="POST" class="story-form">
-                <div class="form-group">
-                    <label for="name">이름:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">이메일 (선택 사항):</label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="form-group">
-                    <label for="story">당신의 이야기:</label>
-                    <textarea id="story" name="story" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn generate-btn">후기 제출하기</button>
-            </form>
-        </div>
     </main>
+
+    <div class="form-section">
+        <h2 class="form-title">추첨 후기 보내기</h2>
+        <p class="form-description">행운의 순간을 다른 사람들과 공유해주세요!</p>
+        <form action="https://formspree.io/f/xojjanzz" method="POST" class="story-form">
+            <div class="form-group">
+                <label for="name">이름:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일 (선택 사항):</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="story">당신의 이야기:</label>
+                <textarea id="story" name="story" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn generate-btn">후기 제출하기</button>
+        </form>
+    </div>
 
     <script src="main.js"></script>
 </body>

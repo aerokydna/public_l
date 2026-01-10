@@ -1,193 +1,88 @@
-
-:root {
-    --bg-color-light: #f0f2f5;
-    --bg-gradient-start: #667eea;
-    --bg-gradient-end: #764ba2;
-    --text-color-primary: #333;
-    --text-color-secondary: #666;
-    --container-bg-color: rgba(255, 255, 255, 0.9);
-    --button-bg-color: #764ba2;
-    --button-hover-bg-color: #663a82;
-    --button-shadow-color: rgba(118, 75, 162, 0.4);
-    --button-hover-shadow-color: rgba(118, 75, 162, 0.5);
-    --ball-text-color: #fff;
-    --app-title-color: #333;
+/* Formspree Form Styles */
+.form-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.dark-mode {
-    --bg-color-light: #1a1a1a;
-    --text-color-primary: #f0f2f5;
-    --text-color-secondary: #aaa;
-    --container-bg-color: rgba(44, 62, 80, 0.9);
-    --button-bg-color: #4b6cb7;
-    --button-hover-bg-color: #3a539b;
-    --button-shadow-color: rgba(75, 108, 183, 0.4);
-    --button-hover-shadow-color: rgba(75, 108, 183, 0.5);
-    --ball-text-color: #fff;
-    --app-title-color: #f0f2f5;
-}
-
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: var(--bg-color-light);
-    background-image: url('https://cdn.pixabay.com/photo/2015/07/28/07/25/lotto-864035_1280.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    color: var(--text-color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    overflow-x: hidden;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-
-
-.app-container {
-    background-color: var(--container-bg-color);
-    padding: 2.5rem 3rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
-    backdrop-filter: blur(10px);
-    position: relative;
-}
-
-.theme-switcher-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.theme-switcher {
-    appearance: none;
-    width: 50px;
-    height: 26px;
-    background-color: #ccc;
-    border-radius: 13px;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s;
-}
-
-.theme-switcher::before {
-    content: '';
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background-color: white;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s;
-}
-
-.theme-switcher:checked {
-    background-color: var(--button-bg-color);
-}
-
-.theme-switcher:checked::before {
-    transform: translateX(24px);
-}
-
-.app-title {
-    font-size: 2.5rem;
+.form-title {
+    font-size: 1.8rem;
     font-weight: 700;
-    color: var(--app-title-color);
-    margin: 0 0 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    color: var(--text-color-primary);
+    margin-bottom: 0.8rem;
 }
 
-.app-icon {
-    font-size: 2.5rem;
-}
-
-.app-description {
-    font-size: 1rem;
+.form-description {
+    font-size: 0.9rem;
     color: var(--text-color-secondary);
-    margin: 0 0 2rem;
-}
-
-.numbers-display {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
     margin-bottom: 2rem;
-    min-height: 50px;
 }
 
-.number-ball {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.story-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--ball-text-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: pop-in 0.3s ease-out forwards;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
 }
 
-.generate-btn {
-    background-color: var(--button-bg-color);
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px var(--button-shadow-color);
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.generate-btn:hover {
-    background-color: var(--button-hover-bg-color);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--button-hover-shadow-color);
+.form-group label {
+    font-size: 1rem;
+    color: var(--text-color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
-@keyframes pop-in {
-    from {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color-primary);
+    background-color: var(--container-bg-color);
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
-/* Responsive Styles */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--button-bg-color);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.story-form .submit-btn {
+    align-self: center;
+    width: auto;
+    min-width: 150px;
+}
+
+.dark-mode .form-group input[type="text"],
+.dark-mode .form-group input[type="email"],
+.dark-mode .form-group textarea {
+    border: 1px solid #555;
+    background-color: rgba(60, 80, 100, 0.9);
+    color: var(--text-color-primary);
+}
+
+.dark-mode .form-group input[type="text"]:focus,
+.dark-mode .form-group input[type="email"]:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: var(--button-bg-color);
+}
+
 @media (max-width: 480px) {
-    .app-container {
-        padding: 2rem 1.5rem;
-    }
-
-    .app-title {
-        font-size: 2rem;
-    }
-
-    .app-icon {
-        font-size: 2rem;
-    }
-
-    .number-ball {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
+    .form-title {
+        font-size: 1.5rem;
     }
 }

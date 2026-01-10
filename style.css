@@ -1,1 +1,131 @@
-/* Add styles here */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f0f2f5;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><g fill-opacity="0.2"><circle fill="%23ffffff" cx="400" cy="400" r="600"/><circle fill="%23f0f2f5" cx="400" cy="400" r="500"/><circle fill="%23e0e2e5" cx="400" cy="400" r="400"/><circle fill="%23d0d2d5" cx="400" cy="400" r="300"/><circle fill="%23c0c2c5" cx="400" cy="400" r="200"/><circle fill="%23b0b2b5" cx="400" cy="400" r="100"/></g></svg>');
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.app-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.app-icon {
+    font-size: 2.5rem;
+}
+
+.app-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0 0 2rem;
+}
+
+.numbers-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    min-height: 50px;
+}
+
+.number-ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: pop-in 0.3s ease-out forwards;
+}
+
+.generate-btn {
+    background-color: #764ba2;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+}
+
+.generate-btn:hover {
+    background-color: #663a82;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(118, 75, 162, 0.5);
+}
+
+@keyframes pop-in {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .app-title {
+        font-size: 2rem;
+    }
+
+    .app-icon {
+        font-size: 2rem;
+    }
+
+    .number-ball {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}

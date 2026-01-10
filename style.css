@@ -16,8 +16,6 @@
 
 .dark-mode {
     --bg-color-light: #1a1a1a;
-    --bg-gradient-start: #2c3e50;
-    --bg-gradient-end: #4b6cb7;
     --text-color-primary: #f0f2f5;
     --text-color-secondary: #aaa;
     --container-bg-color: rgba(44, 62, 80, 0.9);
@@ -32,7 +30,11 @@
 body {
     font-family: 'Noto Sans KR', sans-serif;
     background-color: var(--bg-color-light);
-    background-image: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    background-image: url('https://cdn.pixabay.com/photo/2015/07/28/07/25/lotto-864035_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
     color: var(--text-color-primary);
     display: flex;
     justify-content: center;
@@ -43,17 +45,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><g fill-opacity="0.2"><circle fill="%23ffffff" cx="400" cy="400" r="600"/><circle fill="%23f0f2f5" cx="400" cy="400" r="500"/><circle fill="%23e0e2e5" cx="400" cy="400" r="400"/><circle fill="%23d0d2d5" cx="400" cy="400" r="300"/><circle fill="%23c0c2c5" cx="400" cy="400" r="200"/><circle fill="%23b0b2b5" cx="400" cy="400" r="100"/></g></svg>');
-    opacity: 0.05;
-    pointer-events: none;
-}
+
 
 .app-container {
     background-color: var(--container-bg-color);

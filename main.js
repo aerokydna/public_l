@@ -2,6 +2,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const numbersDisplay = document.getElementById('numbers-display');
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const body = document.body;
+
+    // Theme switcher logic
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+            themeSwitcher.checked = true;
+        } else {
+            body.classList.remove('dark-mode');
+            themeSwitcher.checked = false;
+        }
+    };
+
+    themeSwitcher.addEventListener('change', () => {
+        if (themeSwitcher.checked) {
+            localStorage.setItem('theme', 'dark');
+            applyTheme('dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+            applyTheme('light');
+        }
+    });
+
+    // Apply saved theme on load
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    applyTheme(savedTheme);
+
 
     const getNumberColor = (number) => {
         if (number <= 10) return '#fbc400'; // Yellow

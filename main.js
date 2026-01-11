@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const numbersDisplay = document.getElementById('numbers-display');
     const themeSwitcher = document.getElementById('theme-switcher');
+    const themeIcon = document.getElementById('theme-icon'); // 아이콘을 위한 요소 추가
     const body = document.body;
 
     // Theme switcher logic
@@ -10,9 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (theme === 'dark') {
             body.classList.add('dark-mode');
             themeSwitcher.checked = true;
+            themeIcon.textContent = '🌙'; // 다크 모드일 때 달 아이콘
         } else {
             body.classList.remove('dark-mode');
             themeSwitcher.checked = false;
+            themeIcon.textContent = '☀️'; // 라이트 모드일 때 해 아이콘
         }
     };
 

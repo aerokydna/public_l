@@ -1,40 +1,31 @@
 
 const translations = {
     ko: {
-        // Page Titles
         "title_index": "행운의 로또 번호 생성기",
         "title_about": "About - 로또 번호 생성기",
         "title_contact": "Contact - 로또 번호 생성기",
         "title_privacy": "개인정보 처리방침 - 로또 번호 생성기",
-
-        // Header / Nav
         "nav_home": "Home",
         "nav_about": "소개",
         "nav_contact": "문의",
-
-        // Index Page
         "index_title": "🎲 행운의 로또 번호 생성기",
         "index_description": "버튼을 눌러 당신의 행운 번호 6개를 확인하세요!",
         "index_placeholder": "버튼을 눌러 번호를 생성해주세요.",
         "index_generate_button": "번호 생성하기",
         "chart_title": "번호별 당첨 횟수 통계",
-
-        // About Page
+        "chart_year_selector_label": "연도 선택:",
+        "chart_year_all": "전체",
         "about_title": "About Us",
         "about_p1": "저희 로또 번호 생성기는 사용자 여러분께 무작위성과 재미를 결합한 특별한 경험을 제공하기 위해 만들어졌습니다.",
         "about_p2": "단순한 번호 생성을 넘어, 매주 행운을 기대하는 여러분의 즐거움을 더해드리는 것을 목표로 하고 있습니다.",
         "about_p3": "본 웹사이트는 최신 웹 기술을 사용하여 빠르고 안정적인 서비스를 제공하며, 사용자 여러분의 개인정보 보호를 최우선으로 생각합니다.",
         "about_p4": "여러분의 방문이 즐거운 경험이 되기를 바랍니다.",
-
-        // Contact Page
         "contact_title": "추첨 후기 보내기",
         "contact_description": "행운의 순간을 다른 사람들과 공유해주세요!",
         "contact_name_label": "이름:",
         "contact_email_label": "이메일 (선택 사항):",
         "contact_story_label": "당신의 이야기:",
         "contact_submit_button": "후기 제출하기",
-
-        // Privacy Page
         "privacy_title": "개인정보 처리방침",
         "privacy_p1_title": "1. 수집하는 개인정보 항목",
         "privacy_p1_content": "본 사이트는 사용자의 이름, 이메일 주소(선택 사항) 및 후기 내용을 수집할 수 있습니다. 이는 Formspree 서비스를 통해 처리됩니다.",
@@ -44,12 +35,8 @@ const translations = {
         "privacy_p3_content": "사용자 정보는 관련 법령에 따라 보관되며, 사용자의 요청 시 지체 없이 파기됩니다.",
         "privacy_p4_title": "4. 쿠키에 관한 사항",
         "privacy_p4_content": "본 사이트는 Google AdSense 및 Disqus와 같은 제3자 서비스를 통해 쿠키를 사용할 수 있습니다. 이는 맞춤형 광고 제공 및 사용자 경험 개선을 위해 사용됩니다. 사용자는 브라우저 설정을 통해 쿠키 수집을 거부할 수 있습니다.",
-
-        // Footer
         "footer_copyright": "&copy; 2026 로또 번호 생성기. All Rights Reserved.",
         "footer_privacy_link": "개인정보 처리방침",
-
-        // Accessibility & Alerts
         "aria_read_aloud": "번호 소리내어 읽기",
         "tts_not_supported": "죄송하지만, 사용 중인 브라우저가 음성 변환을 지원하지 않습니다."
     },
@@ -66,6 +53,8 @@ const translations = {
         "index_placeholder": "Press the button to generate numbers.",
         "index_generate_button": "Generate Numbers",
         "chart_title": "Lottery Number Winning Frequency",
+        "chart_year_selector_label": "Select Year:",
+        "chart_year_all": "All",
         "about_title": "About Us",
         "about_p1": "Our lotto number generator was created to provide users with a special experience that combines randomness and fun.",
         "about_p2": "Beyond simple number generation, our goal is to enhance the enjoyment for those of you who look forward to good fortune every week.",
@@ -104,6 +93,8 @@ const translations = {
         "index_placeholder": "ボタンを押して番号を生成してください。",
         "index_generate_button": "番号を生成",
         "chart_title": "番号別当選回数統計",
+        "chart_year_selector_label": "年を選択:",
+        "chart_year_all": "すべて",
         "about_title": "私たちについて",
         "about_p1": "私たちのロト番号ジェネレーターは、ランダム性と楽しさを組み合わせた特別な体験をユーザーに提供するために作成されました。",
         "about_p2": "単なる番号生成を超えて、毎週幸運を期待する皆様の楽しみを高めることを目指しています。",
@@ -142,6 +133,8 @@ const translations = {
         "index_placeholder": "请按按钮生成号码。",
         "index_generate_button": "生成号码",
         "chart_title": "各号码中奖次数统计",
+        "chart_year_selector_label": "选择年份:",
+        "chart_year_all": "全部",
         "about_title": "关于我们",
         "about_p1": "我们的乐透号码生成器旨在为用户提供结合了随机性和趣味性的特殊体验。",
         "about_p2": "我们的目标不仅仅是生成号码，更是为每周期待好运的您增添乐趣。",

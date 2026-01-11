@@ -1,58 +1,89 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로또 번호 생성기</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1528264984750632" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="site-header">
-        <nav class="site-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-    <main class="app-container">
-        <div class="theme-switcher-container">
-            <input type="checkbox" id="theme-switcher" class="theme-switcher">
-        </div>
-        <h1 class="app-title">
-            <span role="img" aria-label="lottery icon" class="app-icon">🎟️</span>
-            로또 번호 생성기
-        </h1>
-        <p class="app-description">다음 추첨을 위한 행운의 번호를 생성해보세요!</p>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/12.7.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/12.7.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/12.7.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-        <div class="numbers-display" id="numbers-display">
-            <!-- Numbers will be generated here -->
-        </div>
-
-        <button class="generate-btn" id="generate-btn">번호 생성하기</button>
-    </main>
-
-    <div class="content-section">
-        <h2>로또의 역사</h2>
-        <p>로또는 전 세계적으로 인기 있는 도박의 한 형태로, 그 역사는 수세기로 거슬러 올라갑니다. 현대적인 형태의 로또는 15세기 유럽에서 시작되었으며, 공공 사업을 위한 자금 조달 방법으로 널리 사용되었습니다.</p>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <div class="content-section">
-        <h2>번호 선택 팁 (재미로만 보세요!)</h2>
-        <p>로또 번호는 완전히 무작위로 추첨되지만, 많은 사람들이 자신만의 방법으로 번호를 선택합니다. 생일, 기념일 등 특별한 날짜를 사용하거나, 통계적으로 자주 나오는 번호를 분석하기도 합니다. 하지만 가장 중요한 것은 로또를 즐기는 마음입니다!</p>
-    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-    <footer class="site-footer">
-        <p>&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
-        <p><a href="privacy.html">개인정보 처리방침</a></p>
-    </footer>
-
-    <script src="main.js"></script>
-</body>
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>

@@ -10,8 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="app-container">
+    <main class="app-container">
         <div class="theme-switcher-container">
             <span id="theme-icon" role="button" aria-label="Toggle theme" style="font-size: 24px; cursor: pointer;"></span>
         </div>
@@ -41,9 +50,13 @@
                 <button type="submit" class="submit-btn">후기 보내기</button>
             </form>
         </div>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
+        <p><a href="privacy.html">개인정보 처리방침</a></p>
+    </footer>
 
     <script src="main.js"></script>
-
 </body>
 </html>

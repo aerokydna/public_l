@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - 로또 번호 생성기</title>
+    <title data-lang="title_contact">Contact - 로또 번호 생성기</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,19 @@
     <header class="site-header">
         <nav class="site-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-lang="nav_home">Home</a></li>
+                <li><a href="about.html" data-lang="nav_about">소개</a></li>
+                <li><a href="contact.html" data-lang="nav_contact">문의</a></li>
+                <li>
+                    <div class="language-selector-container">
+                        <select id="language-selector">
+                            <option value="ko">🇰🇷 한국어</option>
+                            <option value="en">🇬🇧 English</option>
+                            <option value="ja">🇯🇵 日本語</option>
+                            <option value="zh">🇨🇳 中文</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -24,33 +34,30 @@
         <div class="theme-switcher-container">
             <span id="theme-icon" role="button" aria-label="Toggle theme" style="font-size: 24px; cursor: pointer;"></span>
         </div>
-        <h2 class="form-title">추첨 후기 보내기</h2>
-        <p class="form-description">행운의 순간을 다른 사람들과 공유해주세요!</p>
+        <h2 class="form-title" data-lang="contact_title">추첨 후기 보내기</h2>
+        <p class="form-description" data-lang="contact_description">행운의 순간을 다른 사람들과 공유해주세요!</p>
         <form action="https://formspree.io/f/xojjanzz" method="POST" class="story-form">
             <div class="form-group">
-                <label for="name">이름:</label>
+                <label for="name" data-lang="contact_name_label">이름:</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email">이메일 (선택 사항):</label>
+                <label for="email" data-lang="contact_email_label">이메일 (선택 사항):</label>
                 <input type="email" id="email" name="email">
             </div>
             <div class="form-group">
-                <label for="story">당신의 이야기:</label>
+                <label for="story" data-lang="contact_story_label">당신의 이야기:</label>
                 <textarea id="story" name="story" rows="5" required></textarea>
             </div>
-            <button type="submit" class="submit-btn generate-btn">후기 제출하기</button>
+            <button type="submit" class="submit-btn generate-btn" data-lang="contact_submit_button">후기 제출하기</button>
         </form>
     </div>
 
     <div id="disqus_thread"></div>
     <script>
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
         var disqus_config = function () {
-        this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = window.location.pathname; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = window.location.href;
+        this.page.identifier = window.location.pathname;
         };
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
@@ -62,10 +69,12 @@
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
     <footer class="site-footer">
-        <p>&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
-        <p><a href="privacy.html">개인정보 처리방침</a></p>
+        <p data-lang="footer_copyright">&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
+        <p><a href="privacy.html" data-lang="footer_privacy_link">개인정보 처리방침</a></p>
     </footer>
 
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

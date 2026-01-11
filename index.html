@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>행운의 로또 번호 생성기</title>
+    <title data-lang="title_index">행운의 로또 번호 생성기</title>
+    <meta name="description" content="버튼을 눌러 당신의 행운 번호 6개를 확인하세요!" data-lang="index_description">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +14,19 @@
     <header class="site-header">
         <nav class="site-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-lang="nav_home">Home</a></li>
+                <li><a href="about.html" data-lang="nav_about">소개</a></li>
+                <li><a href="contact.html" data-lang="nav_contact">문의</a></li>
+                <li>
+                    <div class="language-selector-container">
+                        <select id="language-selector">
+                            <option value="ko">🇰🇷 한국어</option>
+                            <option value="en">🇬🇧 English</option>
+                            <option value="ja">🇯🇵 日本語</option>
+                            <option value="zh">🇨🇳 中文</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -25,26 +36,27 @@
             <span id="theme-icon" role="button" aria-label="Toggle theme" style="font-size: 24px; cursor: pointer;"></span>
         </div>
 
-        <h1 class="app-title">
+        <h1 class="app-title" data-lang="index_title">
             <span class="app-icon">🎲</span>
             행운의 로또 번호 생성기
         </h1>
-        <p class="app-description">버튼을 눌러 당신의 행운 번호 6개를 확인하세요!</p>
+        <p class="app-description" data-lang="index_description">버튼을 눌러 당신의 행운 번호 6개를 확인하세요!</p>
         
         <div id="numbers-display" class="numbers-display">
-            <!-- 번호 생성 전 안내 메시지 -->
-            <p style="color: var(--text-color-secondary);">버튼을 눌러 번호를 생성해주세요.</p>
+            <p style="color: var(--text-color-secondary);" data-lang="index_placeholder">버튼을 눌러 번호를 생성해주세요.</p>
         </div>
         
-        <button id="generate-btn" class="generate-btn">번호 생성하기</button>
+        <button id="generate-btn" class="generate-btn" data-lang="index_generate_button">번호 생성하기</button>
 
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
-        <p><a href="privacy.html">개인정보 처리방침</a></p>
+        <p data-lang="footer_copyright">&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
+        <p><a href="privacy.html" data-lang="footer_privacy_link">개인정보 처리방침</a></p>
     </footer>
 
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

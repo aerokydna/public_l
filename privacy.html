@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - 로또 번호 생성기</title>
+    <title data-lang="title_privacy">개인정보 처리방침 - 로또 번호 생성기</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,41 +13,58 @@
     <header class="site-header">
         <nav class="site-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-lang="nav_home">Home</a></li>
+                <li><a href="about.html" data-lang="nav_about">소개</a></li>
+                <li><a href="contact.html" data-lang="nav_contact">문의</a></li>
+                <li>
+                    <div class="language-selector-container">
+                        <select id="language-selector">
+                            <option value="ko">🇰🇷 한국어</option>
+                            <option value="en">🇬🇧 English</option>
+                            <option value="ja">🇯🇵 日本語</option>
+                            <option value="zh">🇨🇳 中文</option>
+                        </select>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main class="app-container">
+    <main class="content-section">
         <div class="theme-switcher-container">
             <span id="theme-icon" role="button" aria-label="Toggle theme" style="font-size: 24px; cursor: pointer;"></span>
         </div>
-        <h1 class="app-title">개인정보 처리방침</h1>
+        <h1 class="app-title" data-lang="privacy_title">개인정보 처리방침</h1>
         <div style="text-align: left;">
-            <p><strong>1. 수집하는 개인정보 항목</strong><br>
-            본 사이트는 사용자의 이름, 이메일 주소(선택 사항) 및 후기 내용을 수집할 수 있습니다. 이는 Formspree 서비스를 통해 처리됩니다.</p>
+            <h3 data-lang="privacy_p1_title">1. 수집하는 개인정보 항목</h3>
+            <p data-lang="privacy_p1_content">
+                본 사이트는 사용자의 이름, 이메일 주소(선택 사항) 및 후기 내용을 수집할 수 있습니다. 이는 Formspree 서비스를 통해 처리됩니다.
+            </p>
 
-            <p><strong>2. 개인정보의 수집 및 이용 목적</strong><br>
-            수집된 정보는 서비스 개선 및 사용자 문의 응대에 활용됩니다.</p>
+            <h3 data-lang="privacy_p2_title">2. 개인정보의 수집 및 이용 목적</h3>
+            <p data-lang="privacy_p2_content">
+                수집된 정보는 서비스 개선 및 사용자 문의 응대에 활용됩니다.
+            </p>
 
-            <p><strong>3. 개인정보의 보유 및 이용 기간</strong><br>
-            사용자 정보는 관련 법령에 따라 보관되며, 사용자의 요청 시 지체 없이 파기됩니다.</p>
+            <h3 data-lang="privacy_p3_title">3. 개인정보의 보유 및 이용 기간</h3>
+            <p data-lang="privacy_p3_content">
+                사용자 정보는 관련 법령에 따라 보관되며, 사용자의 요청 시 지체 없이 파기됩니다.
+            </p>
 
-            <p><strong>4. 쿠키에 관한 사항</strong><br>
-            본 사이트는 Google AdSense 및 Disqus와 같은 제3자 서비스를 통해 쿠키를 사용할 수 있습니다. 이는 맞춤형 광고 제공 및 사용자 경험 개선을 위해 사용됩니다. 사용자는 브라우저 설정을 통해 쿠키 수집을 거부할 수 있습니다.</p>
-
-            <p><strong>5. 개인정보의 제3자 제공</strong><br>
-            법령에 근거가 있는 경우를 제외하고는 사용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다.</p>
+            <h3 data-lang="privacy_p4_title">4. 쿠키에 관한 사항</h3>
+            <p data-lang="privacy_p4_content">
+                본 사이트는 Google AdSense 및 Disqus와 같은 제3자 서비스를 통해 쿠키를 사용할 수 있습니다. 이는 맞춤형 광고 제공 및 사용자 경험 개선을 위해 사용됩니다. 사용자는 브라우저 설정을 통해 쿠키 수집을 거부할 수 있습니다.
+            </p>
         </div>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
-        <p><a href="privacy.html">개인정보 처리방침</a></p>
+        <p data-lang="footer_copyright">&copy; 2026 로또 번호 생성기. All Rights Reserved.</p>
+        <p><a href="privacy.html" data-lang="footer_privacy_link">개인정보 처리방침</a></p>
     </footer>
 
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

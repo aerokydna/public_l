@@ -71,6 +71,7 @@ body::before {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center; /* Vertically center items */
     gap: 2rem;
     margin: 0;
     padding: 1rem 0;
@@ -109,38 +110,6 @@ body::before {
     position: absolute;
     top: 20px;
     right: 20px;
-}
-
-.theme-switcher {
-    appearance: none;
-    width: 50px;
-    height: 26px;
-    background-color: #ccc;
-    border-radius: 13px;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s;
-}
-
-.theme-switcher::before {
-    content: '';
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background-color: white;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s;
-}
-
-.theme-switcher:checked {
-    background-color: var(--button-bg-color);
-}
-
-.theme-switcher:checked::before {
-    transform: translateX(24px);
 }
 
 .app-title {
@@ -301,7 +270,6 @@ body::before {
     color: var(--text-color-primary);
 }
 
-
 @keyframes pop-in {
     from {
         transform: scale(0.5);
@@ -311,85 +279,6 @@ body::before {
         transform: scale(1);
         opacity: 1;
     }
-}
-
-/* Feedback Form Styles */
-.feedback-form-container {
-    margin-top: 2.5rem;
-    border-top: 1px solid rgba(128, 128, 128, 0.2);
-    padding-top: 2rem;
-}
-
-.feedback-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-color-primary);
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-#feedback-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.feedback-label {
-    font-size: 0.9rem;
-    color: var(--text-color-secondary);
-    margin-bottom: 0.25rem;
-    text-align: left;
-}
-
-#feedback-form input[type="email"],
-#feedback-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: var(--text-color-primary);
-    background-color: rgba(255,255,255,0.1);
-    box-sizing: border-box; /* To include padding in the width */
-    transition: border-color 0.3s, background-color 0.3s;
-}
-
-.dark-mode #feedback-form input[type="email"],
-.dark-mode #feedback-form textarea {
-    background-color: rgba(0,0,0,0.2);
-    border-color: #444;
-}
-
-#feedback-form input[type="email"]:focus,
-#feedback-form textarea:focus {
-    border-color: var(--button-bg-color);
-    outline: none;
-    background-color: transparent;
-}
-
-#feedback-form textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-.submit-btn {
-    background-color: var(--button-bg-color);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 0.5rem;
-    align-self: center; /* Center the button */
-}
-
-.submit-btn:hover {
-    background-color: var(--button-hover-bg-color);
-    transform: translateY(-1px);
 }
 
 /* Responsive Styles */
@@ -415,4 +304,52 @@ body::before {
     .form-title {
         font-size: 1.5rem;
     }
+}
+
+/* Language Selector Styles */
+.language-selector-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#language-selector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color-primary);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem; /* Right padding for the arrow */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#language-selector:hover {
+    color: var(--button-bg-color);
+}
+
+#language-selector:focus {
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.language-selector-container::after {
+    content: '▼';
+    font-size: 0.7rem;
+    color: var(--text-color-secondary);
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Make the arrow non-interactive */
+    transition: color 0.3s;
+}
+
+.language-selector-container:hover::after {
+    color: var(--button-bg-color);
 }

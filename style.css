@@ -1,3 +1,4 @@
+
 :root {
     --bg-color-light: #f0f2f5;
     --bg-gradient-start: #667eea;
@@ -372,4 +373,14 @@ body::before {
 
 .language-selector-container:hover::after {
     color: var(--button-bg-color);
+}
+
+/* Chart Styles */
+.chart-container {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--container-bg-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }

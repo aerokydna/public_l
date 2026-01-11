@@ -2,34 +2,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generate-btn');
     const numbersDisplay = document.getElementById('numbers-display');
-    const themeSwitcher = document.getElementById('theme-switcher');
-    const themeIcon = document.getElementById('theme-icon'); // 아이콘을 위한 요소 추가
+    const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
 
-    // Theme switcher logic
+    // 테마 적용 및 아이콘 변경 함수
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             body.classList.add('dark-mode');
-            themeSwitcher.checked = true;
             themeIcon.textContent = '🌙'; // 다크 모드일 때 달 아이콘
         } else {
             body.classList.remove('dark-mode');
-            themeSwitcher.checked = false;
             themeIcon.textContent = '☀️'; // 라이트 모드일 때 해 아이콘
         }
     };
 
-    themeSwitcher.addEventListener('change', () => {
-        if (themeSwitcher.checked) {
-            localStorage.setItem('theme', 'dark');
-            applyTheme('dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-            applyTheme('light');
-        }
+    // 아이콘 클릭 이벤트 리스너
+    themeIcon.addEventListener('click', () => {
+        // 현재 body에 dark-mode 클래스가 있는지 확인하여 테마 전환
+        const isDarkMode = body.classList.contains('dark-mode');
+        const newTheme = isDarkMode ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
+        applyTheme(newTheme);
     });
 
-    // Apply saved theme on load
+    // 페이지 로드 시 저장된 테마 적용
     const savedTheme = localStorage.getItem('theme') || 'light';
     applyTheme(savedTheme);
 

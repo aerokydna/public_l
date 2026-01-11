@@ -46,7 +46,11 @@ const translations = {
 
         // Footer
         "footer_copyright": "&copy; 2026 로또 번호 생성기. All Rights Reserved.",
-        "footer_privacy_link": "개인정보 처리방침"
+        "footer_privacy_link": "개인정보 처리방침",
+
+        // Accessibility & Alerts
+        "aria_read_aloud": "번호 소리내어 읽기",
+        "tts_not_supported": "죄송하지만, 사용 중인 브라우저가 음성 변환을 지원하지 않습니다."
     },
     en: {
         "title_index": "Lucky Lotto Number Generator",
@@ -81,7 +85,9 @@ const translations = {
         "privacy_p4_title": "4. Regarding Cookies",
         "privacy_p4_content": "This site may use cookies through third-party services such as Google AdSense and Disqus. This is used to provide personalized advertising and improve the user experience. Users can refuse to have cookies collected through their browser settings.",
         "footer_copyright": "&copy; 2026 Lucky Lotto Number Generator. All Rights Reserved.",
-        "footer_privacy_link": "Privacy Policy"
+        "footer_privacy_link": "Privacy Policy",
+        "aria_read_aloud": "Read numbers aloud",
+        "tts_not_supported": "Sorry, your browser does not support text-to-speech."
     },
     ja: {
         "title_index": "幸運のロト番号ジェネレーター",
@@ -116,7 +122,9 @@ const translations = {
         "privacy_p4_title": "4. クッキーについて",
         "privacy_p4_content": "当サイトは、Google AdSenseやDisqusなどの第三者サービスを通じてクッキーを使用することがあります。これは、パーソ나ライズされた広告の提供やユーザー体験の向上のために使用されます。ユーザーは、ブラウザの設定を通じてクッキーの収集を拒否することができます。",
         "footer_copyright": "&copy; 2026 幸運のロト番号ジェネレーター. All Rights Reserved.",
-        "footer_privacy_link": "プライバシーポリシー"
+        "footer_privacy_link": "プライバシーポリシー",
+        "aria_read_aloud": "番号を読み上げる",
+        "tts_not_supported": "申し訳ありませんが、お使いのブラウザは音声合成をサポートしていません。"
     },
     zh: {
         "title_index": "幸运乐透号码生成器",
@@ -151,6 +159,8 @@ const translations = {
         "privacy_p4_title": "4. 关于Cookie",
         "privacy_p4_content": "本网站可能通过第三方服务（如Google AdSense和Disqus）使用Cookie。这用于提供个性化广告和改善用户体验。用户可以通过浏览器设置拒绝Cookie的收集。",
         "footer_copyright": "&copy; 2026 幸运乐透号码生成器. All Rights Reserved.",
-        "footer_privacy_link": "隐私政策"
+        "footer_privacy_link": "隐私政策",
+        "aria_read_aloud": "朗读号码",
+        "tts_not_supported": "抱歉，您的浏览器不支持语音合成。"
     }
 };

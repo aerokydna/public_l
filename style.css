@@ -377,10 +377,19 @@ body::before {
 
 /* Chart Styles */
 .chart-container {
+    width: 90%;
+    max-width: 500px;
     margin-top: 3rem;
     padding: 2rem;
     background-color: var(--container-bg-color);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
+
+.chart-container canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+

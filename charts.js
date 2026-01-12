@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
             "x": {"field": "Frequency", "title": "출현 빈도", "type": "quantitative"},
             "y": {"field": "번호", "title": "로또 번호", "type": "ordinal"}
         },
-        "height": "container",
         "selection": {"year_selector": {"type": "single", "fields": ["연도"], "bind": {"input": "range", "max": 2026, "min": 2002, "name": "연도 선택: ", "step": 1}, "init": {"연도": 2026}}},
         "transform": [{"filter": {"selection": "year_selector"}}],
         "width": "container",

@@ -7,18 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');
 
-            // --- CRITICAL FIX START ---
-            // Special handling for the app title MUST come first to preserve HTML structure.
-            if (key === 'index_title') {
-                const textHolder = element.querySelector('.app-title-text');
-                if (textHolder) {
-                    textHolder.textContent = translations[lang][key];
-                }
-                // Skip the rest of the logic for this element to prevent innerHTML override.
-                return; 
-            }
-            // --- CRITICAL FIX END ---
-
             if (element.tagName === 'TITLE') {
                 element.textContent = translations[lang][key];
             } else if (element.placeholder) {

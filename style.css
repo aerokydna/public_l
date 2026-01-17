@@ -43,6 +43,7 @@ body {
     overflow-x: hidden;
     transition: background-color 0.3s, color 0.3s;
     padding-top: 80px; /* Add padding for the fixed header */
+    word-break: keep-all;
 }
 
 body::before {
@@ -113,20 +114,31 @@ body::before {
     right: 20px;
 }
 
+/* --- FINAL FIX --- */
 .app-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--app-title-color);
     margin: 0 0 0.5rem;
+    
+    /* Use flexbox for robust alignment */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;     /* Center items vertically */
+    flex-wrap: wrap;         /* Allow items to wrap */
+    gap: 0.5rem;             /* Add a gap between icon and text */
+}
+
+.app-title-text {
+    /* Prevent the text itself from breaking */
+    white-space: nowrap;
 }
 
 .app-icon {
-    font-size: 2.5rem;
+    /* No special styles needed, inherits flex properties */
 }
+/* --- END FINAL FIX --- */
+
 
 .app-description {
     font-size: 1rem;
@@ -169,12 +181,6 @@ body::before {
     cursor: pointer;
     margin-left: 15px;
     transition: transform 0.2s, color 0.2s;
-    color: red; /* DEBUG: Default color is red */
-}
-
-.speaker-icon.visible {
-   color: green; /* DEBUG: Becomes green when visible */
-   transform: scale(1.5); /* DEBUG: Make it bigger */
 }
 
 .speaker-icon:hover {
@@ -392,4 +398,3 @@ body::before {
     width: 100% !important;
     height: auto !important;
 }
-

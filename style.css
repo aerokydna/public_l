@@ -154,6 +154,9 @@ body::before {
     gap: 1rem;
     margin-bottom: 2rem;
     min-height: 50px;
+    /* Make sure this container is centered within its parent */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .number-ball {
@@ -312,6 +315,10 @@ body::before {
 @media (max-width: 480px) {
     .app-container, .content-section, .form-section, #disqus_thread {
         padding: 2rem 1.5rem;
+    }
+    
+    .numbers-display {
+        max-width: 180px;
     }
 
     .app-title {

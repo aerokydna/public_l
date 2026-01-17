@@ -315,11 +315,17 @@ body::before {
     }
 
     .app-title {
-        font-size: 2rem;
+        font-size: 1.6rem; /* Further reduced font size */
+        line-height: 1.3;
+        word-break: break-word; /* Add word break */
+    }
+
+    .app-title-text {
+        white-space: normal !important; /* Make it more forceful */
     }
 
     .app-icon {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Slightly reduce icon size as well */
     }
 
     .number-ball {
